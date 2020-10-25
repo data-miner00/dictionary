@@ -1,0 +1,5 @@
+# Data directory and files
+database/
+
+# Text editor configuration
+.vscode

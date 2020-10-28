@@ -2,10 +2,13 @@ from controller.controller import Controller
 
 class ConsoleUI:
 
+	# Constructor
 	def __init__(self):
 		self.controller = Controller()
 	
-
+	# ( Display + get inputs
+	# ========================================= #
+	# Display screen with get selection
 	def default_screen(self) -> None:
 		print("""
 		|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|
@@ -18,6 +21,7 @@ class ConsoleUI:
 
 		return selection
 
+	# Display screen with get language
 	def select_lang(self) -> str:
 		lang_dict = self.controller.load_lang()
 		
@@ -29,31 +33,24 @@ class ConsoleUI:
 		lang_input = input("Language: ")
 		return lang_input
 
+	# ( Main methods
+	# ========================================= #
+	# Display the selected dictionary
 	def view_dict(self, language: str) -> None:
 		records = self.controller.load_dict(language)
 
 		for index, record in enumerate(records, start=0):
 			self.pretty_print(index, record)
 
-	def pretty_print(self, index: int, record: str):
-		info = record.split(":")
-		word = info[0]
-		meaning = info[1]
-		if (index == 0):
-			print("")
-			print("|================================================")
-		print("| " + str(index) + ". " +  word)
-		print("|================================================")
-		print("- " + meaning)
-		print("")
-
-
+	# Adding a vocabulary into file
 	def add_word(self, language: str) -> None:
 		word = input("Word: ")
 		meaning = input("Meaning: ")
 
 		self.controller.add_word(language, word, meaning)
 
+	# ( Initiate methods
+	# ========================================= #
 	def entry_point(self) -> None:
 		while True:
 			selection = self.default_screen()

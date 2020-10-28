@@ -37,7 +37,7 @@ class Controller:
 		path = "database/" + language + ".txt"
 
 		with open(path, "a+", encoding="utf-8") as f:
-			f.write(word + ":" + meaning)
+			f.write(word + ":" + meaning + "\n")
 
 		print("Adding done")
 	

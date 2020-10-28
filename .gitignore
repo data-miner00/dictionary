@@ -1,5 +1,8 @@
 # Data directory and files
 database/
 
+# Compiled python object
+__pycache__/
+
 # Text editor configuration
 .vscode

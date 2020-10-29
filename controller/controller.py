@@ -3,7 +3,7 @@ from model.vocabulary import Vocabulary
 
 class Controller:
 
-
+	# Constructor
 	def __init__(self):
 		pass
 
@@ -47,9 +47,3 @@ class Controller:
 			return lang_input
 		else:
 			return "not found"
-
-	
-
-		
-	
-	

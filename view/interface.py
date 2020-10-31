@@ -51,12 +51,17 @@ class ConsoleUI:
 
 	# ( Utility methods
 	# ========================================= #
-	def pretty_print(self, index: int, record: index) -> None:
-		record = record.split(",")
-		word = record[0]
-		meaning = record[1]
+	def pretty_print(self, index: int, record: str) -> None:
+		record = record.split(":")
 
-		if index == 1:
+		try:
+			word = record[0]
+			meaning = record[1]
+		except IndexError:
+			print("Something happened when parsing the index")
+			return
+
+		if index == 0:
 			print("---------------------------------------------")
 		print(str(index) + ". " + word)
 		print("Meaning: " + meaning)

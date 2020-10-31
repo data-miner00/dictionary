@@ -49,6 +49,19 @@ class ConsoleUI:
 
 		self.controller.add_word(language, word, meaning)
 
+	# ( Utility methods
+	# ========================================= #
+	def pretty_print(self, index: int, record: index) -> None:
+		record = record.split(",")
+		word = record[0]
+		meaning = record[1]
+
+		if index == 1:
+			print("---------------------------------------------")
+		print(str(index) + ". " + word)
+		print("Meaning: " + meaning)
+		print("---------------------------------------------")
+
 	# ( Initiate methods
 	# ========================================= #
 	def entry_point(self) -> None:

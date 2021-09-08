@@ -1,0 +1,25 @@
+{
+  "name": "dictionary",
+  "version": "1.0.0",
+  "description": "An SaaS dictionary collection service website",
+  "scripts": {
+    "shell": "pipenv shell",
+    "start": "pipenv run python run.py",
+    "lint": "pylint app/",
+    "test": "echo \"not setup\"",
+    "tailwind": "npx tailwindcss-cli@latest build -i ./app/src/style.css -o ./app/static/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/data-miner00/dictionary.git"
+  },
+  "author": "shaun",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/data-miner00/dictionary/issues"
+  },
+  "homepage": "https://github.com/data-miner00/dictionary#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.11"
+  }
+}

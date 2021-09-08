@@ -9,3 +9,6 @@ __pycache__/
 
 # Dependencies
 node_modules
+
+# Tailwind generated CSS
+main.css

@@ -25,3 +25,5 @@ CSRF_SESSION_KEY = "secret"
 
 # Secret key for signing cookies
 SECRET_KEY = "secret"
+
+SQLALCHEMY_TRACK_MODIFICATIONS = False

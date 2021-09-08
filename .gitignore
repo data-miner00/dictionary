@@ -6,3 +6,6 @@ __pycache__/
 
 # Text editor configuration
 .vscode
+
+# Dependencies
+node_modules

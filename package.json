@@ -7,7 +7,8 @@
     "start": "pipenv run python run.py",
     "lint": "pylint app/",
     "test": "echo \"not setup\"",
-    "tailwind": "npx tailwindcss-cli@latest build -i ./app/src/style.css -o ./app/static/css/main.css"
+    "tailwind": "npx tailwindcss-cli@latest build -i ./app/src/style.css -o ./app/static/css/main.css",
+    "wasm": "emcc ./app/src/main.c -s WASM=1 -o ./app/static/wasm/main.html"
   },
   "repository": {
     "type": "git",
